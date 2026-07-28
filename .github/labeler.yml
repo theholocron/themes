@@ -1,0 +1,32 @@
+# AUTO-GENERATED — do not edit directly.
+# Source:  theholocron/holocron · packages/cli/src/commands/setup.ts
+# Synced:  2026-07-28T22:34:30.348Z
+# Tool:    holocron setup
+# Changes: run `holocron setup` to regenerate.
+
+bug:
+  - '^fix'
+
+chore:
+  - '^chore(?!\(deps)'
+
+ci:
+  - '^ci'
+
+dependencies:
+  - '^chore\(deps'
+
+documentation:
+  - '^docs'
+
+enhancement:
+  - '^feat'
+
+performance:
+  - '^perf'
+
+refactor:
+  - '^refactor'
+
+test:
+  - '^test'
