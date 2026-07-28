@@ -2,7 +2,7 @@
 
 <!-- holocron:description -->
 
-Documentation theme and design tokens for theholocron.
+Themes and design tokens.
 
 <!-- /holocron:description -->
 
