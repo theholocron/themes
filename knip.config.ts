@@ -3,7 +3,7 @@ import type { KnipConfig } from "knip";
 const config: KnipConfig = {
 	workspaces: {
 		".": {
-			// holocron.config.ts, eslint.config.ts, commitlint.config.ts auto-detected by Knip plugins
+			// holocron.config.ts, eslint.config.ts, release.config.ts, commitlint.config.ts auto-detected by Knip plugins
 			entry: ["holocron.config.ts"],
 			project: ["*.ts"],
 		},
@@ -27,11 +27,6 @@ const config: KnipConfig = {
 		"@theholocron/lint-staged-config",
 		// prettier config package — no .prettierrc or prettier.config.ts at root
 		"@theholocron/prettier-config",
-		// stylelint config — referenced by .stylelintrc.json, not a static import
-		"@theholocron/stylelint-config",
-		// eslint plugins — loaded by eslint-config at runtime, not static imports
-		"eslint-plugin-n",
-		"eslint-plugin-simple-import-sort",
 		// binary tools — invoked via CLI or hooks, not module imports
 		"alexjs",
 		"husky",
