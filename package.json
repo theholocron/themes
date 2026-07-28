@@ -1,0 +1,63 @@
+{
+  "name": "@theholocron/themes",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Documentation theme and design tokens for theholocron.",
+  "homepage": "https://github.com/theholocron/themes#readme",
+  "bugs": "https://github.com/theholocron/themes/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theholocron/themes.git"
+  },
+  "license": "GPL-3.0",
+  "author": "Newton Koumantzelis",
+  "scripts": {
+    "audit": "knip",
+    "build": "turbo run build",
+    "format": "prettier --write .",
+    "lint": "turbo run lint",
+    "prepare": "husky",
+    "typecheck": "turbo run typecheck"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/types": "^21.2.0",
+    "@theholocron/cli": "catalog:holocron",
+    "@theholocron/commitlint-config": "catalog:",
+    "@theholocron/eslint-config": "catalog:",
+    "@theholocron/holocron-config": "catalog:holocron",
+    "@theholocron/holocron-plugin-github": "catalog:holocron",
+    "@theholocron/lint-staged-config": "catalog:",
+    "@theholocron/prettier-config": "catalog:",
+    "@theholocron/stylelint-config": "catalog:",
+    "@theholocron/tsconfig": "catalog:",
+    "alexjs": "^1.0.0",
+    "eslint": "catalog:",
+    "eslint-plugin-n": "catalog:",
+    "eslint-plugin-simple-import-sort": "catalog:",
+    "globals": "catalog:",
+    "husky": "^9.1.7",
+    "knip": "^6.29.0",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.9.6",
+    "sort-package-json": "^4.0.0",
+    "stylelint": "^17.14.1",
+    "turbo": "^2.10.5",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.34.4",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "pnpm": {
+    "overrides": {
+      "@commitlint/config-conventional": "^21.2.0",
+      "@commitlint/config-conventional>conventional-changelog-conventionalcommits": "7",
+      "tsx": "4.22.4"
+    }
+  },
+  "releases": "https://github.com/theholocron/themes/releases",
+  "wiki": "https://github.com/theholocron/themes/wiki"
+}

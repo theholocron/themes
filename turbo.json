@@ -1,0 +1,20 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["pnpm-workspace.yaml"],
+  "tasks": {
+    "build": {
+      "inputs": ["src/**", "tsdown.config.ts", "tsconfig.json", "package.json"],
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "inputs": ["src/**", "eslint.config.ts", "eslint.config.js"],
+      "outputs": []
+    },
+    "typecheck": {
+      "inputs": ["src/**", "tsconfig.json"],
+      "outputs": [],
+      "dependsOn": ["^build"]
+    }
+  }
+}
