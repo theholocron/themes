@@ -11,10 +11,8 @@
       "inputs": ["src/**", "eslint.config.ts", "eslint.config.js"],
       "outputs": []
     },
-    "typecheck": {
-      "inputs": ["src/**", "tsconfig.json"],
-      "outputs": [],
-      "dependsOn": ["^build"]
+    "release": {
+      "cache": false
     },
     "test": {
       "inputs": ["src/**", "vitest.config.ts", "package.json"],
@@ -26,8 +24,10 @@
       "outputs": ["coverage/**"],
       "dependsOn": ["build"]
     },
-    "release": {
-      "cache": false
+    "typecheck": {
+      "inputs": ["src/**", "tsconfig.json"],
+      "outputs": [],
+      "dependsOn": ["^build"]
     }
   }
 }
