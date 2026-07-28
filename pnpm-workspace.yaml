@@ -7,6 +7,7 @@ catalog:
   '@theholocron/eslint-config': ^7.6.0
   '@theholocron/lint-staged-config': ^7.4.1
   '@theholocron/prettier-config': ^7.4.1
+  '@theholocron/semantic-release-config': ^7.4.1
   '@theholocron/stylelint-config': ^7.6.0
   '@theholocron/tsconfig': ^7.4.1
   '@theholocron/tsdown-config': ^7.4.1

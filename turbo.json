@@ -15,6 +15,9 @@
       "inputs": ["src/**", "tsconfig.json"],
       "outputs": [],
       "dependsOn": ["^build"]
+    },
+    "release": {
+      "cache": false
     }
   }
 }
