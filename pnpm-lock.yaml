@@ -34,7 +34,7 @@ catalogs:
       specifier: ^7.4.1
       version: 7.6.1
     '@types/node':
-      specifier: ^26.1.1
+      specifier: ^26.1.2
       version: 26.1.2
     '@vitest/coverage-v8':
       specifier: ^4.1.10
@@ -52,7 +52,7 @@ catalogs:
       specifier: ^14.0.0
       version: 14.0.0
     globals:
-      specifier: ^17.7.0
+      specifier: ^17.8.0
       version: 17.8.0
     tsdown:
       specifier: ^0.22.13

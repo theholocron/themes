@@ -12,13 +12,13 @@ catalog:
   '@theholocron/tsconfig': ^7.4.1
   '@theholocron/tsdown-config': ^7.4.1
   '@theholocron/vitest-config': ^7.4.1
-  '@types/node': ^26.1.1
+  '@types/node': ^26.1.2
   '@vitest/coverage-v8': ^4.1.10
   '@vitest/eslint-plugin': ^1.6.23
   eslint: ^10.7.0
   eslint-plugin-n: ^18.2.2
   eslint-plugin-simple-import-sort: ^14.0.0
-  globals: ^17.7.0
+  globals: ^17.8.0
   tsdown: ^0.22.13
   typescript: ^5.9.3
   vitest: ^4.1.10
