@@ -4,7 +4,7 @@ import { node } from "@theholocron/holocron-config";
 
 const { repo, workflows, providers } = node();
 export default defineConfig({
-	description: "Documentation theme and design tokens for theholocron.",
+	description: "Themes and design tokens.",
 	repo: {
 		...repo,
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],

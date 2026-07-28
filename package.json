@@ -2,7 +2,7 @@
   "name": "@theholocron/themes",
   "version": "0.0.0",
   "private": true,
-  "description": "Documentation theme and design tokens for theholocron.",
+  "description": "Themes and design tokens.",
   "homepage": "https://github.com/theholocron/themes#readme",
   "bugs": "https://github.com/theholocron/themes/issues",
   "repository": {
