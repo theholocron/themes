@@ -8,7 +8,8 @@ import type { Loader, LoaderContext } from "astro/loaders";
 import matter from "gray-matter";
 
 export type DocsSource =
-	{ dir: string; slug: string } | { package: string; slug: string };
+	| { dir: string; slug: string }
+	| { package: string; slug: string };
 
 const EXTENSIONS = new Set([".md", ".mdx"]);
 
