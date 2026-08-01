@@ -8,8 +8,7 @@ import type { Loader, LoaderContext } from "astro/loaders";
 import matter from "gray-matter";
 
 export type DocsSource =
-	| { dir: string; slug: string }
-	| { package: string; slug: string };
+	{ dir: string; slug: string } | { package: string; slug: string };
 
 const EXTENSIONS = new Set([".md", ".mdx"]);
 
@@ -38,12 +37,34 @@ function computeId(
 
 function resolvePackageContentDir(packageName: string, root: URL): string {
 	const req = createRequire(root);
-	const main = req.resolve(packageName);
-	let dir = dirname(main);
-	while (dir !== dirname(dir)) {
-		if (existsSync(join(dir, "package.json"))) return join(dir, "content");
-		dir = dirname(dir);
+
+	// Fast path: resolve the package's main entry and walk up to package.json.
+	// This works for packages that have a built dist/ directory.
+	try {
+		const main = req.resolve(packageName);
+		let dir = dirname(main);
+		while (dir !== dirname(dir)) {
+			if (existsSync(join(dir, "package.json")))
+				return join(dir, "content");
+			dir = dirname(dir);
+		}
+	} catch {
+		// fast path failed — dist/ not built; fall through to node_modules search
 	}
+
+	// Fallback: search each node_modules directory on the resolution path.
+	// This handles packages published without a built dist/ (e.g. content-only
+	// packages whose main entry is listed in package.json but never compiled).
+	const parts = packageName.startsWith("@")
+		? packageName.split("/", 2)
+		: [packageName];
+	for (const searchPath of req.resolve.paths(packageName) ?? []) {
+		const candidate = join(searchPath, ...parts);
+		if (existsSync(join(candidate, "package.json"))) {
+			return join(candidate, "content");
+		}
+	}
+
 	throw new Error(`Could not resolve content directory for ${packageName}`);
 }
 
