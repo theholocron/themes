@@ -243,6 +243,9 @@ describe("createDocsLoader", () => {
 		expect(store.get("pkg/page")!.data).toMatchObject({
 			title: "From Package",
 		});
+		// filePath for node_modules content must be virtual (id-based) so that
+		// Starlight's autogenerate directory matching works on the slug structure.
+		expect(store.get("pkg/page")!.filePath).toBe("pkg/page.md");
 	});
 
 	it("resolves a package source without a built dist/ via node_modules fallback", async () => {

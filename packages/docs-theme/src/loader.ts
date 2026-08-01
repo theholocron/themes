@@ -8,8 +8,7 @@ import type { Loader, LoaderContext } from "astro/loaders";
 import matter from "gray-matter";
 
 export type DocsSource =
-	| { dir: string; slug: string }
-	| { package: string; slug: string };
+	{ dir: string; slug: string } | { package: string; slug: string };
 
 const EXTENSIONS = new Set([".md", ".mdx"]);
 
@@ -116,7 +115,14 @@ export function createDocsLoader(sources: DocsSource[]): Loader {
 					const raw = await readFile(absPath, "utf-8");
 					const { data: frontmatter, content: body } = matter(raw);
 					const digest = ctx.generateDigest(raw);
-					const filePath = relative(siteRoot, absPath);
+					// Use a virtual filePath based on the entry id so that
+					// Starlight's autogenerate directory matching uses the slug
+					// structure rather than the physical filesystem path (which
+					// for npm package sources points into node_modules and
+					// would not match any configured directory).
+					const filePath = absPath.includes("node_modules")
+						? id + extname(absPath)
+						: relative(siteRoot, absPath);
 					const data = await ctx.parseData({
 						id,
 						data: frontmatter,
