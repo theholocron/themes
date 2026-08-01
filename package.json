@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Themes and design tokens.",
-  "homepage": "https://github.com/theholocron/themes#readme",
+  "homepage": "https://docs.theholocron.dev/themes/",
   "bugs": "https://github.com/theholocron/themes/issues",
   "repository": {
     "type": "git",
