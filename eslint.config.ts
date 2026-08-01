@@ -15,6 +15,7 @@ const config = [
 	},
 	{
 		ignores: [
+			"docs/.astro/**",
 			"packages/*/dist/**",
 			"packages/*/coverage/**",
 			"**/node_modules/**",
