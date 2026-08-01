@@ -305,6 +305,19 @@ describe("createDocsLoader", () => {
 		});
 	});
 
+	it("throws for a Node.js built-in (resolve.paths returns null, covering ?? [] branch)", async () => {
+		// Built-in modules: require.resolve("fs") returns "fs"; dirname("fs") === "."
+		// so the while loop exits without returning, and resolve.paths("fs") is null —
+		// exercising the ?? [] fallback before reaching the throw.
+		const { ctx } = makeCtx(tmpDir);
+
+		await expect(
+			createDocsLoader([{ package: "fs", slug: "pkg" }]).load(
+				ctx as never,
+			),
+		).rejects.toThrow(/Could not resolve content directory/);
+	});
+
 	it("throws when no package.json is found in node_modules", async () => {
 		// A package name that doesn't exist in node_modules at all causes both
 		// require.resolve and the node_modules search to fail.
