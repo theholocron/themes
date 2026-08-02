@@ -8,7 +8,7 @@ description: Starlight plugin providing the shared theme and createDocsLoader fo
 ## Install
 
 ```bash
-npm i @theholocron/docs-theme
+pnpm add @theholocron/docs-theme
 ```
 
 ## Exports
