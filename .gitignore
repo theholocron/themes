@@ -101,3 +101,4 @@ test-report.junit.xml
 /.claude/skills/turborepo
 # end managed by holocron setup — skills
 docs/.astro/
+docs/dist/
