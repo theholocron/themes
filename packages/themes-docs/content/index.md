@@ -16,7 +16,7 @@ sidebar:
 ## Install
 
 ```bash
-npm i @theholocron/docs-theme
+pnpm add @theholocron/docs-theme
 ```
 
 ## Usage
