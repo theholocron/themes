@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.5",
+    "@theholocron/astro-config": "^7.8.1",
     "@theholocron/docs-theme": "workspace:*",
     "@theholocron/themes-docs": "workspace:*",
-    "astro": "^7.1.5",
-    "gray-matter": "^4.0.3"
+    "astro": "^7.1.5"
   },
   "devDependencies": {
     "@types/node": "catalog:",
