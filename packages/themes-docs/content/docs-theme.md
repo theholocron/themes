@@ -38,8 +38,8 @@ Each source is either a local directory path or an npm package name:
 import { createDocsLoader } from "@theholocron/docs-theme/loader";
 
 createDocsLoader([
-  { dir: "/absolute/path/to/content", slug: "prefix" },
-  { package: "@theholocron/clients-docs", slug: "clients" },
+	{ dir: "/absolute/path/to/content", slug: "prefix" },
+	{ package: "@theholocron/clients-docs", slug: "clients" },
 ]);
 ```
 
