@@ -19,11 +19,11 @@ import { createDocsLoader } from "@theholocron/docs-theme/loader";
 import { defineCollection } from "astro:content";
 
 export const collections = {
-  docs: defineCollection({
-    loader: createDocsLoader({
-      packages: [import("@theholocron/themes-docs")],
-    }),
-  }),
+	docs: defineCollection({
+		loader: createDocsLoader({
+			packages: [import("@theholocron/themes-docs")],
+		}),
+	}),
 };
 ```
 
