@@ -1,6 +1,6 @@
 {
   "name": "@theholocron/themes-docs",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Documentation content for the @theholocron/docs-theme Starlight plugin and content loader",
   "keywords": [
     "docs",
