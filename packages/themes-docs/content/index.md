@@ -2,7 +2,7 @@
 title: Themes
 description: Starlight theme and documentation tooling for @theholocron projects.
 sidebar:
-    hidden: true
+  hidden: true
 ---
 
 `@theholocron/themes` is a monorepo of shared documentation tooling for Starlight-based docs sites across the `@theholocron` organization.
@@ -31,11 +31,11 @@ import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-	integrations: [
-		starlight({
-			plugins: [docsTheme()],
-		}),
-	],
+  integrations: [
+    starlight({
+      plugins: [docsTheme()],
+    }),
+  ],
 });
 ```
 
@@ -50,14 +50,14 @@ import { defineCollection } from "astro:content";
 import { fileURLToPath } from "node:url";
 
 export const collections = {
-	docs: defineCollection({
-		loader: createDocsLoader([
-			{
-				dir: fileURLToPath(new URL("../../content", import.meta.url)),
-				slug: "",
-			},
-		]),
-		schema: docsSchema(),
-	}),
+  docs: defineCollection({
+    loader: createDocsLoader([
+      {
+        dir: fileURLToPath(new URL("../../content", import.meta.url)),
+        slug: "",
+      },
+    ]),
+    schema: docsSchema(),
+  }),
 };
 ```
