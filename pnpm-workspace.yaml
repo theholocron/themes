@@ -4,6 +4,7 @@ packages:
 
 # Shared dep versions used across packages.
 catalog:
+  '@theholocron/astro-config': ^7.18.2
   '@theholocron/commitlint-config': ^7.15.0
   '@theholocron/eslint-config': ^7.15.0
   '@theholocron/lint-staged-config': ^7.15.0
