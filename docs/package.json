@@ -10,10 +10,8 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.7",
     "@theholocron/astro-config": "catalog:",
-    "@theholocron/docs-theme": "workspace:*",
-    "astro": "^7.2.0"
+    "@theholocron/docs-theme": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "catalog:",

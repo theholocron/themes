@@ -23,6 +23,7 @@
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@astrojs/starlight": "^0.41.7",
     "@commitlint/cli": "^21.2.1",
     "@commitlint/config-conventional": "^21.2.0",
     "@commitlint/types": "^21.2.0",
@@ -42,6 +43,7 @@
     "@theholocron/stylelint-config": "catalog:",
     "@theholocron/tsconfig": "catalog:",
     "alexjs": "^1.0.0",
+    "astro": "^7.2.0",
     "conventional-changelog-conventionalcommits": "^10.2.0",
     "eslint": "catalog:",
     "eslint-plugin-n": "catalog:",
