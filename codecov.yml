@@ -30,4 +30,3 @@ component_management:
       name: "docs-theme"
       paths:
         - packages/docs-theme/**
-
