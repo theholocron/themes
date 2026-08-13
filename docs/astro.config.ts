@@ -1,11 +1,26 @@
 import starlight from "@astrojs/starlight";
-import { defineConfig } from "@theholocron/astro-config";
 import { docsTheme } from "@theholocron/docs-theme";
-import themesConfig from "@theholocron/themes-docs";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
-	docs: themesConfig,
-	importMetaUrl: import.meta.url,
-	starlight,
-	docsTheme,
+	integrations: [
+		starlight({
+			title: "Themes",
+			plugins: [docsTheme()],
+			social: [
+				{
+					icon: "github",
+					label: "GitHub",
+					href: "https://github.com/theholocron/themes",
+				},
+			],
+			sidebar: [
+				{ label: "Overview", slug: "" },
+				{
+					label: "Packages",
+					items: [{ label: "docs-theme", slug: "docs-theme" }],
+				},
+			],
+		}),
+	],
 });
