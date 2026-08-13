@@ -1,6 +1,6 @@
 import starlight from "@astrojs/starlight";
-import { docsTheme } from "@theholocron/docs-theme";
 import { defineConfig } from "@theholocron/astro-config";
+import { docsTheme } from "@theholocron/docs-theme";
 import themesConfig from "@theholocron/themes-docs";
 
 export default defineConfig({
