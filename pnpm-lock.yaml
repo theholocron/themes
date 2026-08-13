@@ -188,15 +188,9 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.41.7
         version: 0.41.7(@astrojs/markdown-remark@7.2.2)(astro@7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))(typescript@5.9.3)
-      '@theholocron/astro-config':
-        specifier: ^7.15.0
-        version: 7.15.0(astro@7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@theholocron/docs-theme':
         specifier: workspace:*
         version: link:../packages/docs-theme
-      '@theholocron/themes-docs':
-        specifier: workspace:*
-        version: link:../packages/themes-docs
       astro:
         specifier: ^7.2.0
         version: 7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
@@ -262,24 +256,6 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 4.1.10(@opentelemetry/api@1.9.1)(@types/node@26.2.0)(@vitest/coverage-v8@4.1.10)(vite@8.2.1(@types/node@26.2.0)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
-
-  packages/themes-docs:
-    devDependencies:
-      '@theholocron/tsconfig':
-        specifier: 'catalog:'
-        version: 7.15.0(typescript@5.9.3)
-      '@theholocron/tsdown-config':
-        specifier: 'catalog:'
-        version: 7.17.0(tsdown@0.22.14(oxc-resolver@11.24.2)(tsx@4.22.4)(typescript@5.9.3))
-      '@types/node':
-        specifier: 'catalog:'
-        version: 26.2.0
-      tsdown:
-        specifier: 'catalog:'
-        version: 0.22.14(oxc-resolver@11.24.2)(tsx@4.22.4)(typescript@5.9.3)
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
 
 packages:
 
@@ -1941,12 +1917,6 @@ packages:
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
-
-  '@theholocron/astro-config@7.15.0':
-    resolution: {integrity: sha512-5acv0S1T7e9uGGyd2wacNiCrxrxhUFkGjJAOR7RCZ4Ox44s38Mro0jxNLyzzRNfwgTpcbdDEqgU/5/hDejmmWg==}
-    engines: {node: '>=22.0.0'}
-    peerDependencies:
-      astro: '>=5.0.0'
 
   '@theholocron/cli@3.18.5':
     resolution: {integrity: sha512-csfeElWzLIfGC6W3+xit6thbyhRrIHV77cF5C1GWzvH1bs99L/bxbRBxwUzr4uF9KlsPdWDOeJGHDyzlteFyfw==}
@@ -7174,10 +7144,6 @@ snapshots:
   '@sindresorhus/merge-streams@4.0.0': {}
 
   '@standard-schema/spec@1.1.0': {}
-
-  '@theholocron/astro-config@7.15.0(astro@7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
-    dependencies:
-      astro: 7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
   '@theholocron/cli@3.18.5(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)':
     dependencies:
