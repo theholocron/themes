@@ -113,12 +113,18 @@ importers:
       '@semantic-release/github':
         specifier: ^12.0.9
         version: 12.0.9(semantic-release@25.0.9(typescript@5.9.3))
+      '@theholocron/astro-config':
+        specifier: 'catalog:'
+        version: 7.18.2(astro@7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@theholocron/cli':
         specifier: catalog:holocron
         version: 3.18.5(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
       '@theholocron/commitlint-config':
         specifier: 'catalog:'
         version: 7.18.2(@commitlint/cli@21.2.1(@types/node@26.2.0)(conventional-commits-parser@7.1.2)(typescript@5.9.3))(@commitlint/config-conventional@21.2.0)
+      '@theholocron/docs-theme':
+        specifier: workspace:*
+        version: link:packages/docs-theme
       '@theholocron/eslint-config':
         specifier: 'catalog:'
         version: 7.18.2(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(@vitest/eslint-plugin@1.6.27(@typescript-eslint/eslint-plugin@8.65.0(@typescript-eslint/parser@8.65.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3)(vitest@4.1.10))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.9.0)(typescript-eslint@8.65.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
@@ -191,22 +197,6 @@ importers:
       turbo:
         specifier: ^2.10.9
         version: 2.10.9
-      typescript:
-        specifier: 'catalog:'
-        version: 5.9.3
-
-  docs:
-    dependencies:
-      '@theholocron/astro-config':
-        specifier: 'catalog:'
-        version: 7.18.2(astro@7.2.0(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
-      '@theholocron/docs-theme':
-        specifier: workspace:*
-        version: link:../packages/docs-theme
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 26.2.0
       typescript:
         specifier: 'catalog:'
         version: 5.9.3

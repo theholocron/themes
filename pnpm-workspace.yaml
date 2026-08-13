@@ -1,5 +1,4 @@
 packages:
-  - 'docs'
   - 'packages/*'
 
 # Shared dep versions used across packages.

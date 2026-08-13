@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "skipLibCheck": true
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "node_modules/@theholocron/astro-config/types.d.ts",
+    "astro.config.ts",
+    "docs/src/**/*"
+  ],
+  "exclude": ["docs/dist", "packages"]
+}
