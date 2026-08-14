@@ -100,5 +100,5 @@ test-report.junit.xml
 /.claude/skills/commit-standards
 /.claude/skills/security-review
 # end managed by holocron setup — skills
-docs/.astro/
+.astro/
 docs/dist/
