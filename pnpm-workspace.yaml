@@ -11,7 +11,7 @@ catalog:
   '@theholocron/semantic-release-config': ^7.18.2
   '@theholocron/skills': ^1.3.2
   '@theholocron/stylelint-config': ^7.18.2
-  '@theholocron/tsconfig': ^7.18.2
+  '@theholocron/tsconfig': ^7.19.0
   '@theholocron/tsdown-config': ^7.18.2
   '@theholocron/vitest-config': ^7.18.2
   '@types/node': ^26.2.0

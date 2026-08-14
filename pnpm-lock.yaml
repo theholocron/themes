@@ -31,8 +31,8 @@ catalogs:
       specifier: ^7.18.2
       version: 7.18.2
     '@theholocron/tsconfig':
-      specifier: ^7.18.2
-      version: 7.18.2
+      specifier: ^7.19.0
+      version: 7.19.0
     '@theholocron/tsdown-config':
       specifier: ^7.18.2
       version: 7.18.2
@@ -151,7 +151,7 @@ importers:
         version: 7.18.2(stylelint-config-standard-scss@15.0.1(postcss@8.5.24)(stylelint@17.14.1(typescript@5.9.3)))(stylelint-config-standard@38.0.0(stylelint@17.14.1(typescript@5.9.3)))(stylelint@17.14.1(typescript@5.9.3))
       '@theholocron/tsconfig':
         specifier: 'catalog:'
-        version: 7.18.2(typescript@5.9.3)
+        version: 7.19.0(typescript@5.9.3)
       alexjs:
         specifier: ^1.0.0
         version: 1.0.0
@@ -215,7 +215,7 @@ importers:
         version: 7.18.2(@eslint/js@10.0.1(eslint@10.8.1(jiti@2.7.0)))(@vitest/eslint-plugin@1.6.27(@typescript-eslint/eslint-plugin@8.65.0(@typescript-eslint/parser@8.65.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3)(vitest@4.1.10))(eslint-plugin-n@18.3.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))(eslint-plugin-simple-import-sort@14.0.0(eslint@10.8.1(jiti@2.7.0)))(eslint@10.8.1(jiti@2.7.0))(globals@17.9.0)(typescript-eslint@8.65.0(eslint@10.8.1(jiti@2.7.0))(typescript@5.9.3))
       '@theholocron/tsconfig':
         specifier: 'catalog:'
-        version: 7.18.2(typescript@5.9.3)
+        version: 7.19.0(typescript@5.9.3)
       '@theholocron/tsdown-config':
         specifier: 'catalog:'
         version: 7.18.2(tsdown@0.22.14(oxc-resolver@11.24.2)(tsx@4.22.4)(typescript@5.9.3))
@@ -2033,8 +2033,8 @@ packages:
       stylelint-config-standard: ^38
       stylelint-config-standard-scss: ^15
 
-  '@theholocron/tsconfig@7.18.2':
-    resolution: {integrity: sha512-b/vXXL3dobZAbcM+ZGqACGugvfDcjrcNSc6GyUVJPD1R2GdDJQMwZSGbmwcnU/P1rL2Rz9+LWq6XDvt9E+v/2A==}
+  '@theholocron/tsconfig@7.19.0':
+    resolution: {integrity: sha512-d+wbda9kPfMzYX5FfccmX29JESbP9cRq6J6WUvgPSR0+WCzCklg2x0U+db+e5db/OczGOVd32R28902FH36nyQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       typescript: ^5
@@ -7240,7 +7240,7 @@ snapshots:
       stylelint-config-standard: 38.0.0(stylelint@17.14.1(typescript@5.9.3))
       stylelint-config-standard-scss: 15.0.1(postcss@8.5.24)(stylelint@17.14.1(typescript@5.9.3))
 
-  '@theholocron/tsconfig@7.18.2(typescript@5.9.3)':
+  '@theholocron/tsconfig@7.19.0(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 
