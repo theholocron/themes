@@ -14,6 +14,13 @@ const config = [
 		},
 	},
 	{
+		files: ["docs/src/**"],
+		rules: {
+			// docs/src imports live in root package.json, not docs/package.json
+			"n/no-extraneous-import": "off",
+		},
+	},
+	{
 		ignores: ["docs/.astro/**", "packages/*/dist/**", "packages/*/coverage/**", "**/node_modules/**"],
 	},
 ] satisfies Linter.Config[];
