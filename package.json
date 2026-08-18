@@ -27,8 +27,8 @@
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.41.7",
-    "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
     "@commitlint/types": "^21.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^7.1.0",
@@ -48,20 +48,20 @@
     "@theholocron/stylelint-config": "catalog:",
     "@theholocron/tsconfig": "catalog:",
     "alexjs": "^1.0.0",
-    "astro": "^7.2.0",
-    "conventional-changelog-conventionalcommits": "^10.2.0",
+    "astro": "^7.2.2",
+    "conventional-changelog-conventionalcommits": "^10.3.0",
     "eslint": "catalog:",
     "eslint-plugin-n": "catalog:",
     "eslint-plugin-simple-import-sort": "catalog:",
     "globals": "catalog:",
     "husky": "^9.1.7",
-    "knip": "^6.32.0",
+    "knip": "^6.32.2",
     "lint-staged": "^16.2.6",
     "prettier": "^3.9.6",
     "semantic-release": "^25.0.9",
     "sort-package-json": "^4.0.0",
     "stylelint": "^17.14.1",
-    "turbo": "^2.10.9",
+    "turbo": "^2.10.10",
     "typescript": "catalog:"
   },
   "packageManager": "pnpm@10.34.4",
@@ -71,7 +71,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@commitlint/config-conventional": "^21.2.0",
+      "@commitlint/config-conventional": "^21.2.2",
       "@commitlint/config-conventional>conventional-changelog-conventionalcommits": "7",
       "tsx": "4.22.4"
     }
