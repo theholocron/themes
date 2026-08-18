@@ -31,6 +31,8 @@ const config: KnipConfig = {
 		"@commitlint/config-conventional",
 		// passed as --config arg to lint-staged binary in .husky/pre-commit
 		"@theholocron/lint-staged-config",
+		// skills referenced as strings in holocron.config.ts — no static import for Knip to trace
+		"@theholocron/skills",
 		// binary tools — invoked via CLI or hooks, not module imports
 		"alexjs",
 		"sort-package-json",
