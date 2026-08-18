@@ -9,7 +9,7 @@ export default defineConfig({
 	repo: {
 		...repo,
 		protection: "strict",
-		requiredChecks: ["codecov/patch", "codecov/patch/docs-theme", "codecov/project"],
+		requiredChecks: ["audit / Knip", "codecov/patch", "codecov/patch/docs-theme", "codecov/project"],
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "docs", "starlight", "theme", "typescript"],
 	},
