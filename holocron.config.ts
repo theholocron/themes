@@ -8,12 +8,14 @@ export default defineConfig({
 	homepage: "https://docs.theholocron.dev/themes/",
 	repo: {
 		...repo,
+		protection: "strict",
+		requiredChecks: ["audit / Knip", "codecov/patch", "codecov/patch/docs-theme", "codecov/project"],
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "docs", "starlight", "theme", "typescript"],
 	},
 	workflows: [
 		...workflows,
-		"audit",
+		{ name: "audit", with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		{ name: "deploy", with: { docs: true } },
 	],

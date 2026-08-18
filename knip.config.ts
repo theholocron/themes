@@ -4,12 +4,18 @@ const config: KnipConfig = {
 	workspaces: {
 		".": {
 			// holocron.config.ts, eslint.config.ts, release.config.ts, commitlint.config.ts auto-detected by Knip plugins
-			entry: ["holocron.config.ts", "astro.config.ts"],
-			project: ["*.ts", "docs/src/**/*.ts"],
+			// astro.config.ts auto-detected by Knip's Astro plugin
+			entry: ["holocron.config.ts"],
+			project: ["*.ts", "docs/src/**/*.ts", "docs/src/**/*.astro", "docs/src/**/*.mdx"],
 		},
 		"packages/*": {
 			// entry points auto-detected from package.json exports
 			project: ["src/**/*.ts"],
+		},
+		"packages/docs-theme": {
+			project: ["src/**/*.ts"],
+			// no .astro or .mdx source files — ignore compiled extensions the Astro plugin detects
+			ignore: ["**/*.astro", "**/*.mdx"],
 		},
 	},
 	ignoreDependencies: [
@@ -25,13 +31,11 @@ const config: KnipConfig = {
 		"@commitlint/config-conventional",
 		// passed as --config arg to lint-staged binary in .husky/pre-commit
 		"@theholocron/lint-staged-config",
-		// prettier config package — no .prettierrc or prettier.config.ts at root
-		"@theholocron/prettier-config",
+		// skills referenced as strings in holocron.config.ts — no static import for Knip to trace
+		"@theholocron/skills",
 		// binary tools — invoked via CLI or hooks, not module imports
 		"alexjs",
-		"husky",
 		"sort-package-json",
-		"stylelint",
 	],
 	ignoreExportsUsedInFile: true,
 };
