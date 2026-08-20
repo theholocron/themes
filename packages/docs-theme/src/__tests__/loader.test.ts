@@ -88,13 +88,14 @@ describe("createDocsLoader", () => {
 		expect(store.has("projects/mylib")).toBe(true);
 	});
 
-	it("maps root index.md to 'index' when slug is empty", async () => {
+	it("maps root index.md to '' (root) when slug is empty", async () => {
 		await writeFile(join(tmpDir, "index.md"), "---\ntitle: Home\n---\n\nWelcome.");
 		const { ctx, store } = makeCtx(tmpDir);
 
 		await createDocsLoader([{ dir: tmpDir, slug: "" }]).load(ctx as never);
 
-		expect(store.has("index")).toBe(true);
+		expect(store.has("")).toBe(true);
+		expect(store.has("index")).toBe(false);
 	});
 
 	it("walks subdirectories recursively", async () => {

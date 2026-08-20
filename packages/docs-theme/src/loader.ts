@@ -27,7 +27,7 @@ function computeId(filePath: string, baseDir: string, slugPrefix: string): strin
 	if (noIndex) {
 		return slugPrefix ? `${slugPrefix}/${noIndex}` : noIndex;
 	}
-	return slugPrefix || "index";
+	return slugPrefix;
 }
 
 function resolvePackageContentDir(packageName: string, root: URL): string {
