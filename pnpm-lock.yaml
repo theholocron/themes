@@ -7,8 +7,8 @@ settings:
 catalogs:
   default:
     '@theholocron/astro-config':
-      specifier: ^7.19.1
-      version: 7.21.0
+      specifier: ^7.22.2
+      version: 7.22.2
     '@theholocron/commitlint-config':
       specifier: ^7.19.1
       version: 7.21.0
@@ -115,7 +115,7 @@ importers:
         version: 12.0.9(semantic-release@25.0.9(typescript@5.9.3))
       '@theholocron/astro-config':
         specifier: 'catalog:'
-        version: 7.21.0(astro@7.2.2(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 7.22.2(astro@7.2.2(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@theholocron/cli':
         specifier: catalog:holocron
         version: 3.29.0(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(@types/node@26.2.0)(vitest@4.1.10)
@@ -1998,8 +1998,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@theholocron/astro-config@7.21.0':
-    resolution: {integrity: sha512-HnEhYxsD3u8aY6pmOQjy2OPVDtq0jm+8KrnB4+Pzpk5czJ7qGZbD6gKS9j+F4wT6oMosYFo1/tlsahjkn6F36Q==}
+  '@theholocron/astro-config@7.22.2':
+    resolution: {integrity: sha512-cU7nZqBIKZteVB3qBJ0hdSAsKv5EWN7/hreM4/3AiEevq4SDXCYriVXiGQ+MVHoTSLtZk3b4PFE2jEf+zuxg+g==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       astro: '>=5.0.0'
@@ -7288,7 +7288,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@theholocron/astro-config@7.21.0(astro@7.2.2(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
+  '@theholocron/astro-config@7.22.2(astro@7.2.2(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
     dependencies:
       astro: 7.2.2(@astrojs/markdown-remark@7.2.2)(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.3)(@types/node@26.2.0)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
