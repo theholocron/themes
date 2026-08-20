@@ -23,9 +23,15 @@ async function* walk(dir: string): AsyncGenerator<string> {
 function computeId(filePath: string, baseDir: string, slugPrefix: string): string {
 	const rel = relative(baseDir, filePath).replace(/\\/g, "/");
 	const noExt = rel.replace(/\.(mdx?)$/, "");
-	const noIndex = noExt.replace(/\/index$/, "").replace(/^index$/, "");
+	// SKILL.md is a canonical content file (like index.md) — strip it so it maps to its parent slug.
+	// Root SKILL.md with an empty slug maps to "" (the site root), while root index.md maps to "index".
+	const isSkill = /(?:^|\/)SKILL$/.test(noExt);
+	const noIndex = noExt.replace(/\/(index|SKILL)$/, "").replace(/^(index|SKILL)$/, "");
 	if (noIndex) {
 		return slugPrefix ? `${slugPrefix}/${noIndex}` : noIndex;
+	}
+	if (isSkill) {
+		return slugPrefix;
 	}
 	return slugPrefix || "index";
 }

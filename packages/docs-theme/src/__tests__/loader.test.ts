@@ -88,6 +88,21 @@ describe("createDocsLoader", () => {
 		expect(store.has("projects/mylib")).toBe(true);
 	});
 
+	it("maps SKILL.md to the slug prefix", async () => {
+		await writeFile(join(tmpDir, "SKILL.md"), "---\ntitle: Home\n---\n\nWelcome.");
+		const { ctx, store } = makeCtx(tmpDir);
+		await createDocsLoader([{ dir: tmpDir, slug: "skills/my-skill" }]).load(ctx as never);
+		expect(store.has("skills/my-skill")).toBe(true);
+	});
+
+	it("maps root SKILL.md to '' (root) when slug is empty", async () => {
+		await writeFile(join(tmpDir, "SKILL.md"), "---\ntitle: Home\n---\n\nWelcome.");
+		const { ctx, store } = makeCtx(tmpDir);
+		await createDocsLoader([{ dir: tmpDir, slug: "" }]).load(ctx as never);
+		expect(store.has("")).toBe(true);
+		expect(store.has("SKILL")).toBe(false);
+	});
+
 	it("maps root index.md to 'index' when slug is empty", async () => {
 		await writeFile(join(tmpDir, "index.md"), "---\ntitle: Home\n---\n\nWelcome.");
 		const { ctx, store } = makeCtx(tmpDir);
