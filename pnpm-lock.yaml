@@ -73,9 +73,6 @@ catalogs:
     '@theholocron/components-doc':
       specifier: ^1.6.0
       version: 1.6.0
-    '@theholocron/registry-doc':
-      specifier: ^1.6.0
-      version: 1.6.0
   holocron:
     '@theholocron/cli':
       specifier: ^3.24.3
@@ -153,9 +150,6 @@ importers:
       '@theholocron/prettier-config':
         specifier: 'catalog:'
         version: 7.24.1(prettier@3.9.6)
-      '@theholocron/registry-doc':
-        specifier: catalog:docs
-        version: 1.6.0
       '@theholocron/semantic-release-config':
         specifier: 'catalog:'
         version: 7.24.1(@semantic-release/changelog@6.0.3(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@10.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.3.0)(semantic-release@25.0.9(typescript@5.9.3))
@@ -2633,10 +2627,6 @@ packages:
     engines: {node: '>=22.0.0'}
     peerDependencies:
       prettier: ^3
-
-  '@theholocron/registry-doc@1.6.0':
-    resolution: {integrity: sha512-MONKRhpuWE4gdLQxIijU014MFTmgZFBu7+TtgxhbqLxxfJOrsr9HyztSVck/l9D+dWbQ0/V0OijzO1uo6slKqw==}
-    engines: {node: '>=22.0.0'}
 
   '@theholocron/semantic-release-config@7.24.1':
     resolution: {integrity: sha512-0aDrbiIpSxR3M+Gis91q2Tz41/2DZeW8mAl+VJRWpehqZemSQiednw6hax53Eze0274YEyiC8NKG1EJs+L0NVQ==}
@@ -8767,8 +8757,6 @@ snapshots:
   '@theholocron/prettier-config@7.24.1(prettier@3.9.6)':
     dependencies:
       prettier: 3.9.6
-
-  '@theholocron/registry-doc@1.6.0': {}
 
   '@theholocron/semantic-release-config@7.24.1(@semantic-release/changelog@6.0.3(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/commit-analyzer@13.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/exec@7.1.0(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/git@10.0.1(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/github@12.0.9(semantic-release@25.0.9(typescript@5.9.3)))(@semantic-release/release-notes-generator@14.1.1(semantic-release@25.0.9(typescript@5.9.3)))(conventional-changelog-conventionalcommits@10.3.0)(semantic-release@25.0.9(typescript@5.9.3))':
     dependencies:
