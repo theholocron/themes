@@ -6,7 +6,7 @@ const config: KnipConfig = {
 			// holocron.config.ts, eslint.config.ts, release.config.ts, commitlint.config.ts auto-detected by Knip plugins
 			// astro.config.ts auto-detected by Knip's Astro plugin
 			entry: ["holocron.config.ts"],
-			project: ["*.ts", "docs/src/**/*.ts", "docs/src/**/*.astro", "docs/src/**/*.mdx"],
+			project: ["*.ts", "docs/src/**/*.ts", "docs/src/**/*.mdx"],
 		},
 		"packages/*": {
 			// entry points auto-detected from package.json exports
@@ -14,8 +14,6 @@ const config: KnipConfig = {
 		},
 		"packages/docs-theme": {
 			project: ["src/**/*.ts"],
-			// no .astro or .mdx source files — ignore compiled extensions the Astro plugin detects
-			ignore: ["**/*.astro", "**/*.mdx"],
 		},
 	},
 	ignoreDependencies: [
@@ -29,6 +27,8 @@ const config: KnipConfig = {
 		"@theholocron",
 		// pinned as a pnpm override; not directly imported by root code
 		"@commitlint/config-conventional",
+		// used implicitly by @theholocron/components-doc's Astro components — not a direct static import
+		"@theholocron/registry-doc",
 		// passed as --config arg to lint-staged binary in .husky/pre-commit
 		"@theholocron/lint-staged-config",
 		// skills referenced as strings in holocron.config.ts — no static import for Knip to trace
