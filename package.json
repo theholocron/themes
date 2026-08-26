@@ -46,6 +46,7 @@
     "@theholocron/holocron-plugin-github": "catalog:holocron",
     "@theholocron/lint-staged-config": "catalog:",
     "@theholocron/prettier-config": "catalog:",
+    "@theholocron/registry-doc": "catalog:docs",
     "@theholocron/semantic-release-config": "catalog:",
     "@theholocron/skills": "catalog:",
     "@theholocron/stylelint-config": "catalog:",
