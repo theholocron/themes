@@ -1,15 +1,17 @@
 import type { HolocronConfig } from "@theholocron/cli";
 import { defineConfig } from "@theholocron/cli";
-import { node } from "@theholocron/holocron-config";
+import { nodeDocs } from "@theholocron/holocron-config";
 
-const { repo, workflows, providers } = node();
+const { repo, workflows, providers, org, domain, docs } = nodeDocs();
 export default defineConfig({
 	description: "Themes and design tokens.",
 	homepage: "https://docs.theholocron.dev/themes/",
+	org,
+	domain,
+	docs,
 	repo: {
 		...repo,
-		protection: "strict",
-		requiredChecks: ["audit / Knip", "codecov/patch", "codecov/patch/docs-theme", "codecov/project"],
+		requiredChecks: [...repo.requiredChecks, "codecov/patch/docs-theme"],
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "docs", "starlight", "theme", "typescript"],
 	},
@@ -18,12 +20,8 @@ export default defineConfig({
 		{ name: "audit", with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		"sync",
-		{ name: "deploy", with: { docs: true } },
 	],
-	providers: {
-		...providers,
-		secrets: "github",
-	},
+	providers: { ...providers, secrets: "github" },
 	agent: "claude",
 	skills: ["git-safety", "pr-workflow", "commit-standards", "security-review", "turborepo"],
 } satisfies HolocronConfig);
