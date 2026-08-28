@@ -6,6 +6,9 @@ const { repo, workflows, providers } = node();
 export default defineConfig({
 	description: "Themes and design tokens.",
 	homepage: "https://docs.theholocron.dev/themes/",
+	org: "theholocron",
+	domain: "theholocron.dev",
+	docs: { build: "workflow", https: true },
 	repo: {
 		...repo,
 		protection: "strict",
@@ -18,14 +21,13 @@ export default defineConfig({
 		{ name: "audit", with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		"sync",
-		{
-			name: "deploy",
-			with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } },
-		},
+		{ name: "deploy", with: { docs: true, preview: true } },
 	],
 	providers: {
 		...providers,
 		secrets: "github",
+		deployment: "cloudflare",
+		dns: "cloudflare",
 	},
 	agent: "claude",
 	skills: ["git-safety", "pr-workflow", "commit-standards", "security-review", "turborepo"],
