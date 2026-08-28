@@ -18,7 +18,10 @@ export default defineConfig({
 		{ name: "audit", with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		"sync",
-		{ name: "deploy", with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } } },
+		{
+			name: "deploy",
+			with: { docs: true, preview: { project: "theholocron-preview", domain: "preview.theholocron.dev" } },
+		},
 	],
 	providers: {
 		...providers,
