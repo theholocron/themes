@@ -6,13 +6,29 @@ Themes and design tokens.
 
 <!-- /holocron:description -->
 
+<!-- holocron:installation -->
+
+## Installation
+
+```bash
+pnpm install @theholocron/themes
+```
+
+## Usage
+
+```typescript
+import {} from "@theholocron/themes";
+```
+
+<!-- /holocron:installation -->
+
 ## Packages
 
 <!-- holocron:packages -->
 
-| Package                                            | Description                                                                       |
-| -------------------------------------------------- | --------------------------------------------------------------------------------- |
-| [`@theholocron/docs-theme`](./packages/docs-theme) | Starlight plugin providing the shared docs theme (accent colors, dark/light mode) |
+| Package                   | Docs                                             | npm                                                          |
+| ------------------------- | ------------------------------------------------ | ------------------------------------------------------------ |
+| `@theholocron/docs-theme` | [Docs](https://docs.theholocron.dev/themes/docs) | [npm](https://www.npmjs.com/package/@theholocron/docs-theme) |
 
 <!-- /holocron:packages -->
 
@@ -20,15 +36,17 @@ Themes and design tokens.
 
 <!-- holocron:development -->
 
-This repo uses [pnpm workspaces](https://pnpm.io/workspaces) and [Turbo](https://turbo.build).
-
-```bash
-pnpm install       # install all deps
-pnpm build         # build all packages
-pnpm test          # test all packages
-pnpm typecheck     # typecheck all packages
-pnpm lint          # lint all packages
-```
+| Script               | Command                   |
+| -------------------- | ------------------------- |
+| `pnpm build`         | `turbo run build`         |
+| `pnpm docs:dev`      | `astro dev`               |
+| `pnpm docs:build`    | `astro build`             |
+| `pnpm docs:preview`  | `astro preview`           |
+| `pnpm lint`          | `turbo run lint`          |
+| `pnpm test`          | `turbo run test`          |
+| `pnpm test:coverage` | `turbo run test:coverage` |
+| `pnpm typecheck`     | `turbo run typecheck`     |
+| `pnpm audit`         | `knip`                    |
 
 <!-- /holocron:development -->
 
@@ -36,6 +54,7 @@ pnpm lint          # lint all packages
 
 <!-- holocron:releases -->
 
-Releases are automated via [semantic-release](https://semantic-release.gitbook.io) on push to `main`. All packages are versioned and published in lockstep. See [CHANGELOG.md](CHANGELOG.md) for the release history.
+Automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
+See the [releases page](https://docs.theholocron.dev/themes//releases) and [CHANGELOG.md](./CHANGELOG.md).
 
 <!-- /holocron:releases -->
