@@ -1,8 +1,8 @@
 import type { HolocronConfig } from "@theholocron/cli";
 import { defineConfig } from "@theholocron/cli";
-import { audit, compose, docs, node } from "@theholocron/holocron-config";
+import { nodeDocs } from "@theholocron/holocron-config";
 
-const preset = compose(node(), docs(), audit({ knip: true }));
+const preset = nodeDocs();
 export default defineConfig({
 	...preset,
 	description: "Themes and design tokens.",
@@ -13,7 +13,12 @@ export default defineConfig({
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "docs", "starlight", "theme", "typescript"],
 	},
-	workflows: [...preset.workflows, { name: "release", with: { "run-build": true } }, "sync"],
+	workflows: [
+		...preset.workflows,
+		{ name: "audit", with: { "run-knip": true } },
+		{ name: "release", with: { "run-build": true } },
+		"sync",
+	],
 	providers: { ...preset.providers, secrets: "github" },
 	agent: "claude",
 	skills: ["git-safety", "pr-workflow", "commit-standards", "security-review", "turborepo"],
