@@ -14,7 +14,7 @@ catalog:
   '@theholocron/tsconfig': ^7.24.1
   '@theholocron/tsdown-config': ^7.24.1
   '@theholocron/vitest-config': ^7.24.1
-  '@types/node': ^26.2.0
+  '@types/node': ^26.4.0
   '@vitest/coverage-v8': ^4.1.10
   '@vitest/eslint-plugin': ^1.6.26
   eslint: ^10.8.1
