@@ -6,18 +6,20 @@ const config: KnipConfig = {
 			// holocron.config.ts, eslint.config.ts, release.config.ts, commitlint.config.ts auto-detected by Knip plugins
 			// astro.config.ts auto-detected by Knip's Astro plugin
 			entry: ["holocron.config.ts"],
-			project: ["*.ts", "docs/src/**/*.ts", "docs/src/**/*.mdx"],
+			project: ["*.ts", "docs/src/**/*.{ts,astro,mdx}"],
 		},
 		"packages/*": {
 			// entry points auto-detected from package.json exports
 			project: ["src/**/*.ts"],
 		},
 		"packages/docs-theme": {
-			project: ["src/**/*.ts"],
+			project: ["src/**/*.{ts,astro,mdx}"],
 		},
 	},
 	ignoreDependencies: [
 		// Loaded at runtime by the holocron plugin system — not a static import
+		"@theholocron/holocron-plugin-cloudflare",
+		"@theholocron/holocron-plugin-fern",
 		"@theholocron/holocron-plugin-github",
 		// tsconfig.json "extends" — not a module import
 		"@theholocron/tsconfig",

@@ -1,8 +1,8 @@
 import type { HolocronConfig } from "@theholocron/cli";
 import { defineConfig } from "@theholocron/cli";
-import { nodeDocs } from "@theholocron/holocron-config";
+import { compose, nodeDocs, wikiCapability as wiki } from "@theholocron/holocron-config";
 
-const preset = nodeDocs();
+const preset = compose(nodeDocs(), wiki());
 export default defineConfig({
 	...preset,
 	description: "Themes and design tokens.",
