@@ -55,6 +55,6 @@ import {} from "@theholocron/themes";
 <!-- holocron:releases -->
 
 Automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/).
-See the [releases page](https://docs.theholocron.dev/themes//releases) and [CHANGELOG.md](./CHANGELOG.md).
+See the [releases page](https://docs.theholocron.dev/themes/releases) and [CHANGELOG.md](./CHANGELOG.md).
 
 <!-- /holocron:releases -->
