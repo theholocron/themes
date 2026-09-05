@@ -19,7 +19,11 @@ export default defineConfig({
 		{ name: "release", with: { "run-build": true } },
 		"sync",
 	],
-	providers: { ...preset.providers, secrets: "github" },
+	providers: {
+		...preset.providers,
+		secrets: "github",
+		wiki: ["fern", { domain: "wiki.theholocron.dev", fernOrg: "holocron", icon: "fa-duotone fa-palette" }],
+	},
 	agent: "claude",
 	skills: ["git-safety", "pr-workflow", "commit-standards", "security-review", "turborepo"],
 } satisfies HolocronConfig);
