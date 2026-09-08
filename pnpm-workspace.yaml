@@ -15,8 +15,8 @@ catalog:
   "@theholocron/tsdown-config": ^8.2.0
   "@theholocron/vitest-config": ^8.2.0
   "@types/node": ^26.4.1
-  "@vitest/coverage-v8": ^4.1.10
-  "@vitest/eslint-plugin": ^1.6.26
+  '@vitest/coverage-v8': ^5.0.0
+  '@vitest/eslint-plugin': ^1.6.26
   eslint: ^10.8.1
   eslint-plugin-n: ^18.3.0
   eslint-plugin-simple-import-sort: ^14.0.0
