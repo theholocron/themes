@@ -9,16 +9,16 @@ export default defineConfig({
 	homepage: "https://docs.theholocron.dev/themes/",
 	repo: {
 		...preset.repo,
-		requiredChecks: [...preset.repo.requiredChecks, "codecov/patch/docs-theme"],
 		teams: [{ slug: "gatekeepers", permission: "maintain" }],
 		topics: ["astro", "docs", "starlight", "theme", "typescript"],
 	},
-	workflows: [
-		...preset.workflows,
-		{ name: "audit", with: { "run-knip": true } },
+	tasks: [
+		...preset.tasks,
+		{ name: "audit", required: true, with: { "run-knip": true } },
 		{ name: "release", with: { "run-build": true } },
 		"sync",
 	],
+	extraRequiredChecks: [...preset.extraRequiredChecks, "codecov/patch/docs-theme"],
 	providers: {
 		...preset.providers,
 		secrets: "github",
