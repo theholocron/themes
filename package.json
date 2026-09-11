@@ -5,10 +5,7 @@
   "description": "Themes and design tokens.",
   "homepage": "https://docs.theholocron.dev/themes/",
   "bugs": "https://github.com/theholocron/themes/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/theholocron/themes.git"
-  },
+  "repository": "github:theholocron/themes",
   "license": "GPL-3.0",
   "author": "Newton Koumantzelis",
   "type": "module",
