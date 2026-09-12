@@ -3,6 +3,13 @@
   "version": "1.10.2",
   "private": true,
   "description": "Themes and design tokens.",
+  "keywords": [
+    "astro",
+    "docs",
+    "starlight",
+    "theme",
+    "typescript"
+  ],
   "homepage": "https://docs.theholocron.dev/themes/",
   "bugs": "https://github.com/theholocron/themes/issues",
   "repository": "github:theholocron/themes",
@@ -16,12 +23,15 @@
     "docs:dev": "astro dev",
     "docs:preview": "astro preview",
     "format": "prettier --write .",
-    "lint": "turbo run lint",
+    "lint": "holocron run lint",
     "prepare": "husky",
     "release": "semantic-release",
-    "test": "turbo run test",
+    "test": "holocron run test",
     "test:coverage": "turbo run test:coverage",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "holocron run typecheck",
+    "holocron": "holocron",
+    "wiki": "holocron run wiki",
+    "sync": "holocron run sync"
   },
   "devDependencies": {
     "@astrojs/react": "^6.0.4",
