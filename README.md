@@ -10,15 +10,8 @@ Themes and design tokens.
 
 ## Installation
 
-```bash
-pnpm install @theholocron/themes
-```
-
-## Usage
-
-```typescript
-import {} from "@theholocron/themes";
-```
+This repository is a workspace root — it is not published. See the
+packages under [`packages/`](./packages) for the tools it ships.
 
 <!-- /holocron:installation -->
 
