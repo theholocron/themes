@@ -5,7 +5,7 @@ const config: KnipConfig = {
 		".": {
 			// holocron.config.ts, eslint.config.ts, release.config.ts, commitlint.config.ts auto-detected by Knip plugins
 			// astro.config.ts auto-detected by Knip's Astro plugin
-			entry: ["holocron.config.ts"],
+			entry: ["holocron.config.ts", "astromech.config.ts"],
 			project: ["*.ts", "docs/src/**/*.{ts,astro,mdx}"],
 		},
 		"packages/*": {
