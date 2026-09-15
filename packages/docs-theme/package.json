@@ -56,7 +56,7 @@
     "gray-matter": "^4.0.3"
   },
   "devDependencies": {
-    "@astrojs/starlight": "^0.41.7",
+    "@astrojs/starlight": "^0.42.0",
     "@theholocron/cli": "catalog:holocron",
     "@theholocron/eslint-config": "catalog:",
     "@theholocron/tsconfig": "catalog:",
@@ -65,7 +65,7 @@
     "@types/node": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/eslint-plugin": "catalog:",
-    "astro": "^7.2.2",
+    "astro": "^7.3.2",
     "eslint": "catalog:",
     "eslint-plugin-n": "catalog:",
     "eslint-plugin-simple-import-sort": "catalog:",
