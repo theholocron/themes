@@ -57,7 +57,7 @@
     "@theholocron/stylelint-config": "catalog:",
     "@theholocron/tsconfig": "catalog:",
     "alexjs": "^1.0.0",
-    "astro": "^7.2.2",
+    "astro": "^7.2.8",
     "conventional-changelog-conventionalcommits": "^10.3.0",
     "eslint": "catalog:",
     "eslint-plugin-n": "catalog:",
